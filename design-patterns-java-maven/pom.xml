@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.github.learningpatterns</groupId>
+    <artifactId>design-patterns-java-maven</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <name>Design Patterns Java Maven</name>
+    <description>按资料章节划分的 Java 17 设计模式 Maven 多模块学习代码库</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.release>17</maven.compiler.release>
+        <maven.compiler.parameters>true</maven.compiler.parameters>
+    </properties>
+
+    <modules>
+        <module>chapters/01-solid</module>
+        <module>chapters/02-singleton</module>
+        <module>chapters/03-factory-method</module>
+        <module>chapters/04-abstract-factory</module>
+        <module>chapters/05-builder</module>
+        <module>chapters/06-prototype</module>
+        <module>chapters/07-adapter</module>
+        <module>chapters/08-bridge</module>
+        <module>chapters/09-decorator</module>
+        <module>chapters/10-proxy</module>
+        <module>chapters/11-facade</module>
+        <module>chapters/12-observer</module>
+        <module>chapters/13-strategy</module>
+        <module>chapters/14-template-method</module>
+        <module>chapters/15-command</module>
+        <module>chapters/16-chain-of-responsibility</module>
+        <module>chapters/17-state</module>
+        <module>chapters/18-pattern-catalog</module>
+        <module>chapters/19-learning-roadmap</module>
+        <module>chapters/20-environment-troubleshooting</module>
+        <module>chapters/21-comprehensive-order-system</module>
+    </modules>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.13.0</version>
+                    <configuration>
+                        <release>${maven.compiler.release}</release>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                        <parameters>${maven.compiler.parameters}</parameters>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.5.2</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+
